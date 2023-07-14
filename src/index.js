@@ -3,15 +3,42 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Router>
     <App />
-  </React.StrictMode>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+// function App() {
+//   return (
+//     <>
+//       <h1 style={{ textAlign: "center" }}>Example to setup your carousel in react</h1>
+//       <div className="App">
+//         <Carousel breakPoints={breakPoints}>
+//           <Item>One</Item>
+//           <Item>Two</Item>
+//           <Item>Three</Item>
+//           <Item>Four</Item>
+//           <Item>Five</Item>
+//           <Item>Six</Item>
+//           <Item>Seven</Item>
+//           <Item>Eight</Item>
+//         </Carousel>
+//       </div>
+//     </>
+//   );
+// }
+
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<App />, rootElement);

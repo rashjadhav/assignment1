@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.headerbackcolor {
+  background: #ff6634;
+  color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbutoon {
+  background: #ff6634;
+}
+
+.card {
+  background: rgb(39, 37, 37);
+  margin: 0.5em;
+}
+
+.header {
+  background-color: #1d1f25;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.backimg {
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/public/sofa3.jpg");
+
+}
+
+/* .slider {
+  font-family: sans-serif;
+  display: flex-wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} */
+
+
+
+.navcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 180px; */
+  padding: 0 2rem;
+  background-color: var(--primaryColor);
+  color: var(--textColor);
+
+}
+
+nav a {
+  margin: 0 1rem;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--secondaryColor);
+}
+
+.navcontainer .nav-btn {
+  padding: 2px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+.navcontainer div,
+nav {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navcontainer .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    padding: 15px;
+  }
+
+  .navcontainer nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #bcf971;
+    transition: 0.5s;
+    transform: translateX(100vh);
+    margin-left: 50%;
+    z-index: 10;
+  }
+
+  .navcontainer .responsive {
+    transform: none;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
+  .backimg {
+    height: "100%";
+    width: "930px";
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image: url("/public/sofa1.jpg");
+
+  }
+
+
 }
